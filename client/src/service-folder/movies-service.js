@@ -1,7 +1,6 @@
 const API = 'http://localhost:8080/movies/'
 const axios = require('axios').default;
 
-
 //Get all movies from specific genre
 export async function getDataFromDB(movieGenre) {
     let myData = await axios.get(`${API}${movieGenre}`)
