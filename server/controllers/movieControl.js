@@ -152,7 +152,7 @@ async function updateMovie(req, res) {
 async function getMoviesByPage(req, res) {
     let genreName = (req.path.split('/')[1]).toUpperCase()
     let page = (req.params.page < 1 || req.params.page > maxPages[genreName] ) ? 1 : req.params.page
-    await movieModel[2].find((err, results) => {
+    await movieModel[collection[genreName]].find((err, results) => {
          err && results.status(400).json({success: false,error: err});
          !results.length && res.status(404).json({success: false,message: 'No movies available'})
          console.log('results: ', JSON.stringify(results))

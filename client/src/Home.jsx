@@ -6,13 +6,12 @@ export default function Home({category,title,totalPages}) {
     const [movies, setMovies] = useState([])
     const [pageNow,setPageNow] = useState(1)
     async function showMovies(){
-        console.log(category, pageNow);
         let moviesArray = await getDataByPagesFromDB(category,pageNow);
         setMovies(moviesArray)
     }
     useEffect(() => {
         showMovies()
-    }, [pageNow])
+    }, [pageNow,category])
     return (
         <div className="Home">  
             <h1>{title}</h1>
