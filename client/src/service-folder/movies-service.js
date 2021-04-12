@@ -14,7 +14,7 @@ export async function getDataByPagesFromDB(movieGenre,page) {
     }).catch(err=>{
         console.log(err)
     })
-    return myData.data.data
+    return myData
 }
 //Remove specific movie by movie genre and id of movie
 export async function removeFromDB(movieGenre, movieIndexArray) {
