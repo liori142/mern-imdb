@@ -1,4 +1,5 @@
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT 
+console.log(process.env);
 const API = `http://localhost:${PORT}/movies/`
 const axios = require('axios').default;
 
