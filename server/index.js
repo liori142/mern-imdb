@@ -25,10 +25,6 @@ app.listen(PORT,()=>{
   console.log(`server is up on ${PORT}`)
 })
 
-app.get('/',(req,res)=>{
-    res.send('api is working!')
-})
-
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors())
