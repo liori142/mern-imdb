@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+::-webkit-scrollbar {
+  width: 10px;
+  border: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+.card {
+  margin:20px;
+  height: fit-content;
+  width: 300px;
+  position: relative;
+  background: #1b1d2373;
+  color: #fff;
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.5em;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.card > div {
+  min-height: 250px;
+  width: 100%;
+  overflow: hidden;
+  /* pointer-events: none; */
+}
+.card .imgBox {
+  position: relative;
+  filter: grayscale(10%);
+}
+.card .imgBox img {
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card .text {
+  padding: 20px;
+  mix-blend-mode: screen;
+}
+.card .text * {
+  margin-bottom: 10px;
+}
+.card .text .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+}
+.card .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .stars {
+  text-align: right;
+  color: #d00000;
+}
+.summary {
+  text-align: justify;
+  max-height: 100px;
+  width: 105%;
+  padding-right: 20px;
+  overflow-y: auto;
+}
+.trailer {
+  /* position: absolute;
+  bottom: 10px; */
+  width: 50%;
+  height: 30px;
+  margin-bottom: 20px;
+  border: 2px solid #d00000;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.trailer:hover {
+  background: #d00000;
+}
+.trailer a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #d00000;
+  pointer-events: visible;
+  font-size: 1.4em;
+  transition: 0.5s;
+}
+.trailer:hover a {
+  color: #fff;
+}
+.trailer i {
+  margin: 3px 0 0 3px;
+}
+

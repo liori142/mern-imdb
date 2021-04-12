@@ -1,0 +1,15 @@
+.Home{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+  }
+
+  .movie-class {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: calc(10px + 2vmin);
+  }
