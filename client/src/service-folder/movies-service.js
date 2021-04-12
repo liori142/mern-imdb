@@ -1,4 +1,5 @@
-const API = 'http://localhost:8080/movies/'
+const PORT = process.env.PORT || 8080
+const API = `http://localhost:${PORT}/movies/`
 const axios = require('axios').default;
 
 //Get all movies from specific genre
