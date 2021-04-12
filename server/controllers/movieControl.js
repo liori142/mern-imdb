@@ -149,6 +149,7 @@ async function updateMovie(req, res) {
     })
 }
 
+// get Movies by category and page
 async function getMoviesByPage(req, res) {
     let genreName = (req.path.split('/')[1]).toUpperCase()
     let page = (req.params.page < 1 || req.params.page > maxPages[genreName] ) ? 1 : req.params.page
@@ -162,7 +163,7 @@ async function getMoviesByPage(req, res) {
          })
      }).limit(20).skip((page -1) * 20)
  }
-
+// get the
 async function getAllMoviesByGenre(req, res) {
     let genreName = (req.path.split('/')[1]).toUpperCase()
     await movieModel[collection[genreName]].find((err, results) => {

@@ -9,6 +9,9 @@ const router = require('./routes/movieRouter')
 const path = require('path')
 
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(cors())
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
@@ -25,7 +28,4 @@ app.listen(PORT,()=>{
   console.log(`server is up on ${PORT}`)
 })
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended:true}))
-app.use(cors())
 app.use('/movies',router)
