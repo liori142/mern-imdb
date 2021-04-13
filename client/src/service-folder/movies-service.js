@@ -1,5 +1,6 @@
+
 const API = `https://mern-imdb.herokuapp.com/movies/`
-const axios = require('axios').default;
+const axios = require('axios');
 
 //Get all movies from specific genre
 export async function getDataFromDB(movieGenre) {
