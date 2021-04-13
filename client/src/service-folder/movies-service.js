@@ -1,6 +1,6 @@
 const PORT = process.env.PORT 
 console.log(process.env);
-const API = `http://localhost:${PORT}/movies/`
+const API = `https://mern-imdb.herokuapp.com/movies`
 const axios = require('axios').default;
 
 //Get all movies from specific genre
