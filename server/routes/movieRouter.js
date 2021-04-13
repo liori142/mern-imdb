@@ -10,6 +10,8 @@ moviesRouter.get(`/${genre}`, moviesController.getAllMoviesByGenre)
 moviesRouter.get(`/${genre}/:page`, moviesController.getMoviesByPage)
 })
 
+moviesRouter.get(`/`, (req,res)=>{res.send('Welcome to movies')})
+
 //Save movie 
 moviesRouter.post('/saveMovie', moviesController.saveMovie)
 

@@ -1,5 +1,3 @@
-const PORT = process.env.PORT 
-console.log(process.env);
 const API = `https://mern-imdb.herokuapp.com/movies/`
 const axios = require('axios').default;
 
