@@ -32,8 +32,8 @@ export default function Card(props) {
     <div className="card" onMouseEnter={changeToMovieBackground} onMouseOut={changeBackgroundBack}>
       <div className="imgBox">
         <img
-          src={backdrop_path}
-          alt=""
+          src={backdrop_path.slice(-4)=== 'null'? '/nomovie.png':backdrop_path}
+          alt='N/A'
         />
       </div>
       <div className="text">

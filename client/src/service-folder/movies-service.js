@@ -1,6 +1,6 @@
 
-const API = `https://mern-imdb.herokuapp.com/movies/`
-const axios = require('axios');
+const API = `http://localhost:8080/movies/`
+const axios = require('axios').default;
 
 //Get all movies from specific genre
 export async function getDataFromDB(movieGenre) {
@@ -31,6 +31,7 @@ export async function removeFromDB(movieGenre, movieIndexArray) {
     })
 }
 
+//Add to DB
 export async function addMovieToDB(movieObject){
     console.log(movieObject.title)
     axios.post(`${API}/saveMovie`, {
@@ -57,3 +58,6 @@ export async function addMovieToDB(movieObject){
       });
 }
 
+export async function findMovies(MovieName){
+    return (await axios.get(`${API}search/${MovieName}`)).data.data
+}

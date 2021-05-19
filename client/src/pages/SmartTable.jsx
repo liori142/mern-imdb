@@ -37,11 +37,9 @@ export default function SmartTable() {
     ];
     const options = {
         filterType: 'checkbox',
-        // customToolbarSelect:(selectedRows, displayData) => {console.log(selectedRows,displayData)},
         onRowsDelete: (e) => removeFromDB('marvel',e.data)
    };
-    // (e.target.id.split('-')[1])
-
+    
     return <div >
         <MUIDataTable 
             title={"Marvel Movies"}
@@ -49,7 +47,6 @@ export default function SmartTable() {
             columns={columns}
             options={options}
         />
-
     </div>
 
 }

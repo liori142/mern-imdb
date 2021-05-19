@@ -3,6 +3,25 @@
     color:rgb(207, 207, 207);
     font-size: larger;
 }
+
+.list-class {
+    background:rgb(14, 14, 36);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.list-class a {
+    text-decoration-line: none;
+    color:aliceblue;
+}
+ 
+a:hover{
+    color:rgb(255, 0, 0);
+    background:'red';
+    padding-bottom: 10px;
+}
 li{
     padding: 20px 20px;
 }

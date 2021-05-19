@@ -112,14 +112,12 @@ async function saveMovie(req, res) {
 //Search movie by name
 async function searchMovieByName(req, res) {
     let movieNameParam = req.params.movieName
-    let queryByName = {original_title: {"$regex": movieNameParam,"$options": "i"}}
-    let queryById = {id:movieNameParam};
-    let rdyQuery = {$or:[queryById,queryByName]}
-    await movieModel[collection.ALL].find(queryByName, (err, results) => {
+    let queryByName = {title: {"$regex": movieNameParam,"$options": "i"}}
+    await movieModel[collection.ALL].find(queryByName,(err, results) => {
         err && res.status(400).json({success: false,error: err})
-        !results.length && res.status(404).json({success: false,message: 'No movies available'})
+        // if(results.length) return res.status(404).json({success: false,message: 'No movies available'})
         console.log("result:", JSON.stringify(results));
-        res.status(200).json({success: true, data: results});});
+        res.status(200).json({success: true, data: results});}).limit(20)
 }
 
 //Remove movie by id
